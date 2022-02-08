@@ -1,0 +1,13 @@
+query LaunchesPast($offset:Int) {
+  launchesPast(limit: 10, sort: "launch_date_local", order: "desc", offset: $offset) {
+    id
+    mission_name
+    launch_date_local
+    details
+    links {
+      mission_patch_small
+      flickr_images
+    }
+  }
+}
+
